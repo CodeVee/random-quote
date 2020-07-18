@@ -17,15 +17,15 @@
         <div class="d-flex justify-content-center align-items-center h-100">
             <div class="card mb-3" style="max-width: 540px;" id="quote-box">
                 <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <img id="quote-img" src="https://firstclasse.com.my/wp-content/uploads/2019/07/Nelson-Mandela-opener.jpg" class="card-img" alt="...">
+                    <div class="col-md-4 align-self-center">
+                        <img id="quote-img" src="https://upload.wikimedia.org/wikipedia/commons/5/54/Steve_Jobs.jpg" class="card-img" alt="...">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
                             <h5 class="card-title">Quote of the day</h5>
                             <blockquote class="blockquote mb-0">
                                 <p id="text">The greatest glory in living lies not in never falling, but in rising every time we fall.</p>
-                                <footer id="author" class="blockquote-footer">Nelson Mandela in <cite title="Source Title">Long Walk to Freedom</cite></footer>
+                                <footer id="author" class="blockquote-footer">Nelson Mandela  <cite title="Source Title">Long Walk to Freedom</cite></footer>
                             </blockquote>
                             <div class="d-flex justify-content-between mt-4">
                                 <a style="height: 2rem;" id="tweet-quote" target="_blank" href="https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=%22Eighty%20percent%20of%20success%20is%20showing%20up.%22%20Woody%20Allen">
@@ -44,7 +44,74 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script>
-        
+        $(() => {
+            
+        });
+
+
+
+        const quotes = [
+            {
+                'author': 'Nelson Mandela',
+                'quote': 'The greatest glory in living lies not in never falling, but in rising every time we fall.',
+                'source': 'Long Walk to Freedom',
+                'image': 'https://firstclasse.com.my/wp-content/uploads/2019/07/Nelson-Mandela-opener.jpg'
+            },
+            {
+                'author': 'Walt Disney',
+                'quote': 'The way to get started is to quit talking and begin doing.',
+                'source': 'Disney Studios',
+                'image': 'https://upload.wikimedia.org/wikipedia/commons/d/df/Walt_Disney_1946.JPG'
+            },
+            {
+                'author': 'Eleanor Roosevelt',
+                'quote': 'If life were predictable it would cease to be life, and be without flavor.',
+                'source': 'United Nations',
+                'image': 'https://legacyprojectchicago.org/sites/default/files/2019-08/Eleanor%20Roosevelt_0.jpg'
+            },
+            {
+                'author': 'Oprah Winfrey',
+                'quote': "If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough.",
+                'source': 'Harpo',
+                'image': 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/oprah-winfrey-1579259252.jpg?resize=480:*'
+            },
+            {
+                'author': 'James Cameron',
+                'quote': "If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success.",
+                'source': 'Avatar',
+                'image': 'https://cdn.britannica.com/84/160284-050-695B1DE3/James-Cameron-2012.jpg'
+            },
+            {
+                'author': 'Steve Jobs',
+                'quote': "Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking.",
+                'source': 'Apple Inc',
+                'image': 'https://upload.wikimedia.org/wikipedia/commons/5/54/Steve_Jobs.jpg'
+            },
+            {
+                'author': 'Mother Teresa',
+                'quote': 'Spread love everywhere you go. Let no one ever come to you without leaving happier.',
+                'source': 'Calculta',
+                'image': 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSZqvw4qGI9HMtll7g352uLopweYfFVVJRxZA&usqp=CAU'
+            },
+            {
+                'author': 'Maya Angelou',
+                'quote': 'You will face many defeats in life, but never let yourself be defeated.',
+                'source': 'Poet',
+                'image': 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSQ8BjpiPvXbMny12SThJdKHkUaJ1zYDX52BQ&usqp=CAU'
+            },
+            {
+                'author': 'Thanos',
+                'quote': 'You could not live with your own failure. And where did that bring you? Back to me.',
+                'source': 'Avengers Endgame',
+                'image': 'https://i.pinimg.com/originals/8a/e9/8e/8ae98eef9038997fa3aae6c2fa1c85d1.jpg'
+            },
+            {
+                'author': 'Tony Stark',
+                'quote': 'I am Iron Man',
+                'source': 'Ironman',
+                'image': 'https://firstclasse.com.my/wp-content/uploads/2019/07/Nelson-Mandela-opener.jpg'
+            }
+        ];
     </script>
 </body>
 </html>
