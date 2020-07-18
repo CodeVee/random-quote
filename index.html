@@ -10,6 +10,11 @@
         height: 100%;
     }
 
+    #quote-img {
+        max-height: 270px;
+        height: 100%;
+    }
+
     </style>
 </head>
 <body>
@@ -17,7 +22,7 @@
         <div class="d-flex justify-content-center align-items-center h-100">
             <div class="card mb-3" style="max-width: 540px;" id="quote-box">
                 <div class="row no-gutters">
-                    <div class="col-md-4 align-self-center">
+                    <div class="col-md-4 align-self-stretch">
                         <img id="quote-img" src="https://upload.wikimedia.org/wikipedia/commons/5/54/Steve_Jobs.jpg" class="card-img" alt="...">
                     </div>
                     <div class="col-md-8">
@@ -45,7 +50,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script>
         $(() => {
-            
+            $('#new-quote').click(getQuote);
+            getQuote();
         });
 
 
@@ -59,7 +65,7 @@
             },
             {
                 'author': 'Walt Disney',
-                'quote': 'The way to get started is to quit talking and begin doing.',
+                'quote': 'Why worry? If you’ve done the very best you can, then worrying won’t make it any better.',
                 'source': 'Disney Studios',
                 'image': 'https://upload.wikimedia.org/wikipedia/commons/d/df/Walt_Disney_1946.JPG'
             },
@@ -71,7 +77,7 @@
             },
             {
                 'author': 'Oprah Winfrey',
-                'quote': "If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough.",
+                'quote': 'When you undervalue what you do, the world will undervalue who you are.',
                 'source': 'Harpo',
                 'image': 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/oprah-winfrey-1579259252.jpg?resize=480:*'
             },
@@ -83,7 +89,7 @@
             },
             {
                 'author': 'Steve Jobs',
-                'quote': "Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking.",
+                'quote': 'Design is not just what it looks like and feels like. Design is how it works.',
                 'source': 'Apple Inc',
                 'image': 'https://upload.wikimedia.org/wikipedia/commons/5/54/Steve_Jobs.jpg'
             },
@@ -95,7 +101,7 @@
             },
             {
                 'author': 'Maya Angelou',
-                'quote': 'You will face many defeats in life, but never let yourself be defeated.',
+                'quote': "If you don't like something, change it. If you can't change it, change your attitude.",
                 'source': 'Poet',
                 'image': 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSQ8BjpiPvXbMny12SThJdKHkUaJ1zYDX52BQ&usqp=CAU'
             },
@@ -107,11 +113,21 @@
             },
             {
                 'author': 'Tony Stark',
-                'quote': 'I am Iron Man',
+                'quote': 'If we can’t protect the Earth, you can be damned well sure we’ll avenge it!',
                 'source': 'Ironman',
-                'image': 'https://firstclasse.com.my/wp-content/uploads/2019/07/Nelson-Mandela-opener.jpg'
+                'image': 'https://a.wattpad.com/cover/21257876-352-k659669.jpg'
             }
         ];
+
+        function getQuote() {
+            const index = Math.floor(Math.random() * 10);
+            const quote = quotes[index];
+
+            $('#text').text(quote.quote);
+            $('#author').html(`${quote.author} <cite title="${quote.source}">${quote.source}</cite>`);
+            $('#quote-img').attr('src', quote.image);
+            $('#quote-img').attr('alt', quote.author);
+        }
     </script>
 </body>
 </html>
