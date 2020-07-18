@@ -15,6 +15,10 @@
         height: 100%;
     }
 
+    #tweet-quote {
+        height: 2rem;
+    }
+
     </style>
 </head>
 <body>
@@ -33,8 +37,8 @@
                                 <footer id="author" class="blockquote-footer">Nelson Mandela  <cite title="Source Title">Long Walk to Freedom</cite></footer>
                             </blockquote>
                             <div class="d-flex justify-content-between mt-4">
-                                <a style="height: 2rem;" id="tweet-quote" target="_blank" href="https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=%22Eighty%20percent%20of%20success%20is%20showing%20up.%22%20Woody%20Allen">
-                                    <img class="h-100" src="https://cdn2.iconfinder.com/data/icons/minimalism/512/twitter.png" alt="">
+                                <a id="tweet-quote" target="_blank" href="https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=%22Eighty%20percent%20of%20success%20is%20showing%20up.%22%20Woody%20Allen">
+                                    <img class="h-100" src="https://cdn2.iconfinder.com/data/icons/minimalism/512/twitter.png" alt="twitter logo">
                                 </a>
                                 <button id="new-quote" class="btn btn-info">New Quote</button>
                             </div>
@@ -127,6 +131,9 @@
             $('#author').html(`${quote.author} <cite title="${quote.source}">${quote.source}</cite>`);
             $('#quote-img').attr('src', quote.image);
             $('#quote-img').attr('alt', quote.author);
+
+            const tweet = `https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text="${quote.quote}" ${quote.author}`;
+            $('#tweet-quote').attr('href', tweet);
         }
     </script>
 </body>
